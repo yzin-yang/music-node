@@ -3,13 +3,15 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SearchModule } from './search/search.module';
+import { FindModule } from './find/find.module';
 
 @Module({
   imports: [
     SearchModule,
     GraphQLModule.forRoot({
       autoSchemaFile: 'schema.gql'
-    })
+    }),
+    FindModule
   ],
   controllers: [AppController],
   providers: [AppService]

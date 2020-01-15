@@ -8,7 +8,7 @@ export class SearchResolver {
 
   @Query(returns => Search)
   async search(@Args('id') id: string): Promise<Search> {
-    const result = await { id: '1', title: 'test' };
+    const result = await { id: '1', title: 'HMR' };
     return result;
   }
 }

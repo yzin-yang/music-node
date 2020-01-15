@@ -11,6 +11,10 @@ module.exports = function(options) {
         whitelist: ['webpack/hot/poll?100']
       })
     ],
-    plugins: [...options.plugins, new webpack.HotModuleReplacementPlugin()]
+    plugins: [
+      ...options.plugins,
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NamedModulesPlugin()
+    ]
   };
 };
