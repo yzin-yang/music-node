@@ -3,7 +3,6 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "One Dark Pro",
   "code-runner.saveFileBeforeRun": true,
-  "terminal.integrated.shell.osx": "/bin/zsh",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "[html]": {
