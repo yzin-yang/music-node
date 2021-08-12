@@ -62,8 +62,8 @@ export default {
       params: {
         limit,
         order,
-        cat
-      }
+        cat,
+      },
     });
   },
   /**
@@ -82,8 +82,8 @@ export default {
     return axios.get(newDishes, {
       params: {
         limit,
-        offset
-      }
+        offset,
+      },
     });
   },
   /**
@@ -95,8 +95,8 @@ export default {
     return axios.get(songListDetail, {
       params: {
         id,
-        s
-      }
+        s,
+      },
     });
   },
   /* ---------------------------- 发现 end ---------------------------- */
@@ -109,8 +109,8 @@ export default {
   isPhoneRegistered(phone) {
     return axios.get(phoneRegistered, {
       params: {
-        phone
-      }
+        phone,
+      },
     });
   },
   /**
@@ -122,8 +122,8 @@ export default {
     return axios.get(phoneLogin, {
       params: {
         phone: phone || '',
-        password: password || ''
-      }
+        password: password || '',
+      },
     });
   },
   /**
@@ -144,8 +144,8 @@ export default {
     return axios.get(userRecord, {
       params: {
         uid,
-        type
-      }
+        type,
+      },
     });
   },
   /**
@@ -171,8 +171,8 @@ export default {
   getPlaylist(uid) {
     return axios.get(playlist, {
       params: {
-        uid
-      }
+        uid,
+      },
     });
   },
   /**
@@ -182,8 +182,8 @@ export default {
   getUserDj(uid) {
     return axios.get(userDj, {
       params: {
-        uid
-      }
+        uid,
+      },
     });
   },
 
@@ -210,8 +210,8 @@ export default {
         keywords,
         limit,
         offset,
-        type
-      }
+        type,
+      },
     });
   },
   /**
@@ -229,8 +229,8 @@ export default {
       params: {
         key,
         pageNo,
-        pageSize
-      }
+        pageSize,
+      },
     });
   },
   /**
@@ -250,8 +250,8 @@ export default {
     return axios.get(suggestSearch, {
       params: {
         keywords,
-        type
-      }
+        type,
+      },
     });
   },
   /* ---------------------------- 搜索 end ---------------------------- */
@@ -268,8 +268,8 @@ export default {
     return axios.get(songUrl, {
       params: {
         id,
-        br
-      }
+        br,
+      },
     });
   },
 
@@ -287,8 +287,8 @@ export default {
     return axios.get('/qqapi/song/url', {
       params: {
         id,
-        type
-      }
+        type,
+      },
     });
   },
 
@@ -301,9 +301,9 @@ export default {
     return axios.get(checkSong, {
       params: {
         id,
-        br
-      }
+        br,
+      },
     });
-  }
+  },
   /* ---------------------------- 播放器 end --------------------------- */
 };

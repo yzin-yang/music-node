@@ -1,0 +1,12 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Query {
+  search(id: String!): Search!
+}
+
+type Search {
+  id: ID!
+  title: String!
+}

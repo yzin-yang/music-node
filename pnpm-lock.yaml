@@ -19,6 +19,7 @@ specifiers:
   eslint-config-prettier: ^8.3.0
   eslint-plugin-prettier: ^3.4.0
   graphql: ^15.5.1
+  graphql-tools: ^8.1.0
   jest: 27.0.6
   prettier: ^2.3.2
   reflect-metadata: ^0.1.13
@@ -29,7 +30,6 @@ specifiers:
   ts-loader: ^9.2.3
   ts-node: ^10.0.0
   tsconfig-paths: ^3.10.1
-  type-graphql: ^1.1.1
   typescript: ^4.3.5
 
 dependencies:
@@ -39,10 +39,10 @@ dependencies:
   '@nestjs/platform-express': 8.0.6_67f7e5db8827badcb202b1d38f6b1aea
   apollo-server-express: 2.25.2_graphql@15.5.1
   graphql: 15.5.1
+  graphql-tools: 8.1.0_graphql@15.5.1
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
   rxjs: 7.3.0
-  type-graphql: 1.1.1_graphql@15.5.1
 
 devDependencies:
   '@nestjs/cli': 8.1.1
@@ -122,6 +122,34 @@ packages:
       ora: 5.4.1
       rxjs: 6.6.7
     dev: true
+
+  /@apollo/client/3.4.7_graphql@15.5.1:
+    resolution: {integrity: sha1-Y9fDU5zEX+RKycsJOidkFHmo0a0=, tarball: '@apollo/client/download/@apollo/client-3.4.7.tgz'}
+    peerDependencies:
+      graphql: ^14.0.0 || ^15.0.0
+      react: ^16.8.0 || ^17.0.0
+      subscriptions-transport-ws: ^0.9.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      subscriptions-transport-ws:
+        optional: true
+    dependencies:
+      '@graphql-typed-document-node/core': 3.1.0_graphql@15.5.1
+      '@wry/context': 0.6.1
+      '@wry/equality': 0.5.2
+      '@wry/trie': 0.3.1
+      graphql: 15.5.1
+      graphql-tag: 2.12.5_graphql@15.5.1
+      hoist-non-react-statics: 3.3.2
+      optimism: 0.16.1
+      prop-types: 15.7.2
+      symbol-observable: 4.0.0
+      ts-invariant: 0.9.1
+      tslib: 2.3.0
+      zen-observable-ts: 1.1.0
+    dev: false
+    optional: true
 
   /@apollo/protobufjs/1.2.2:
     resolution: {integrity: sha1-S9ks13Acyu9tUXzbda8nVfBJ+Hw=, tarball: '@apollo/protobufjs/download/@apollo/protobufjs-1.2.2.tgz'}
@@ -289,6 +317,8 @@ packages:
       '@babel/template': 7.14.5
       '@babel/traverse': 7.15.0
       '@babel/types': 7.15.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/helper-optimise-call-expression/7.14.5:
@@ -311,6 +341,8 @@ packages:
       '@babel/helper-optimise-call-expression': 7.14.5
       '@babel/traverse': 7.15.0
       '@babel/types': 7.15.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/helper-simple-access/7.14.8:
@@ -344,6 +376,8 @@ packages:
       '@babel/template': 7.14.5
       '@babel/traverse': 7.15.0
       '@babel/types': 7.15.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/highlight/7.14.5:
@@ -558,6 +592,17 @@ packages:
       tslib: 2.2.0
     dev: false
 
+  /@graphql-tools/merge/7.0.0_graphql@15.5.1:
+    resolution: {integrity: sha1-rzOA9dxFNocDl6O6xa/QzVPhGt0=, tarball: '@graphql-tools/merge/download/@graphql-tools/merge-7.0.0.tgz'}
+    peerDependencies:
+      graphql: ^14.0.0 || ^15.0.0
+    dependencies:
+      '@graphql-tools/schema': 8.0.3_graphql@15.5.1
+      '@graphql-tools/utils': 8.0.2_graphql@15.5.1
+      graphql: 15.5.1
+      tslib: 2.3.0
+    dev: false
+
   /@graphql-tools/schema/7.1.5_graphql@15.5.1:
     resolution: {integrity: sha1-B7JOUrGC5zamt3yCn8SLhNiapxE=, tarball: '@graphql-tools/schema/download/@graphql-tools/schema-7.1.5.tgz'}
     peerDependencies:
@@ -567,6 +612,18 @@ packages:
       graphql: 15.5.1
       tslib: 2.2.0
       value-or-promise: 1.0.6
+    dev: false
+
+  /@graphql-tools/schema/8.0.3_graphql@15.5.1:
+    resolution: {integrity: sha1-UEprJ5vlKieLnIr5C3EMncyf9zI=, tarball: '@graphql-tools/schema/download/@graphql-tools/schema-8.0.3.tgz'}
+    peerDependencies:
+      graphql: ^14.0.0 || ^15.0.0
+    dependencies:
+      '@graphql-tools/merge': 7.0.0_graphql@15.5.1
+      '@graphql-tools/utils': 8.0.2_graphql@15.5.1
+      graphql: 15.5.1
+      tslib: 2.3.0
+      value-or-promise: 1.0.10
     dev: false
 
   /@graphql-tools/utils/7.10.0_graphql@15.5.1:
@@ -579,6 +636,24 @@ packages:
       graphql: 15.5.1
       tslib: 2.2.0
     dev: false
+
+  /@graphql-tools/utils/8.0.2_graphql@15.5.1:
+    resolution: {integrity: sha1-eVqDg839yJhVcH1iSRxXb0OfPFE=, tarball: '@graphql-tools/utils/download/@graphql-tools/utils-8.0.2.tgz'}
+    peerDependencies:
+      graphql: ^14.0.0 || ^15.0.0
+    dependencies:
+      graphql: 15.5.1
+      tslib: 2.3.0
+    dev: false
+
+  /@graphql-typed-document-node/core/3.1.0_graphql@15.5.1:
+    resolution: {integrity: sha1-Du5jc+EUGL/gtWOPZU33pMpqOVA=, tarball: '@graphql-typed-document-node/core/download/@graphql-typed-document-node/core-3.1.0.tgz'}
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
+    dependencies:
+      graphql: 15.5.1
+    dev: false
+    optional: true
 
   /@humanwhocodes/config-array/0.5.0:
     resolution: {integrity: sha1-FAeWfUxu7Nc4j4Os8er00Mbljvk=, tarball: '@humanwhocodes/config-array/download/@humanwhocodes/config-array-0.5.0.tgz'}
@@ -764,6 +839,8 @@ packages:
       graceful-fs: 4.2.8
       jest-haste-map: 27.0.6
       jest-runtime: 27.0.6
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@jest/transform/27.0.6:
@@ -1220,13 +1297,6 @@ packages:
       '@types/node': 16.6.0
     dev: false
 
-  /@types/glob/7.1.4:
-    resolution: {integrity: sha1-6lniHS7lxReRTLS8jkFTuZ5WZnI=, tarball: '@types/glob/download/@types/glob-7.1.4.tgz'}
-    dependencies:
-      '@types/minimatch': 3.0.5
-      '@types/node': 16.6.0
-    dev: false
-
   /@types/graceful-fs/4.1.5:
     resolution: {integrity: sha1-If+6DZjaQ1DbZIkfkqnl2zzbThU=, tarball: '@types/graceful-fs/download/@types/graceful-fs-4.1.5.tgz'}
     dependencies:
@@ -1298,10 +1368,6 @@ packages:
   /@types/mime/1.3.2:
     resolution: {integrity: sha1-k+Jb+e51/g/YC1lLxP6w6GIRG1o=, tarball: '@types/mime/download/@types/mime-1.3.2.tgz'}
 
-  /@types/minimatch/3.0.5:
-    resolution: {integrity: sha1-EAHMXmo3BLg8I2An538vWOoBD0A=, tarball: '@types/minimatch/download/@types/minimatch-3.0.5.tgz'}
-    dev: false
-
   /@types/node/10.17.60:
     resolution: {integrity: sha1-NfPWIT2u2V2n8Pc+dbzGmA6QWXs=, tarball: '@types/node/download/@types/node-10.17.60.tgz'}
     dev: false
@@ -1322,10 +1388,6 @@ packages:
 
   /@types/range-parser/1.2.4:
     resolution: {integrity: sha1-zWZ7z90CUhOq+3ylkVqTJZCs3Nw=, tarball: '@types/range-parser/download/@types/range-parser-1.2.4.tgz'}
-
-  /@types/semver/7.3.8:
-    resolution: {integrity: sha1-UIonmVSY11htzs13wl4om/r5DFk=, tarball: '@types/semver/download/@types/semver-7.3.8.tgz'}
-    dev: false
 
   /@types/serve-static/1.13.10:
     resolution: {integrity: sha1-9eDOh5fS18xevtpIpSyWxPpHqNk=, tarball: '@types/serve-static/download/@types/serve-static-1.13.10.tgz'}
@@ -1371,6 +1433,11 @@ packages:
     dependencies:
       '@types/yargs-parser': 20.2.1
     dev: true
+
+  /@types/zen-observable/0.8.3:
+    resolution: {integrity: sha1-eB02DCgkNklLMv59n3+OZLMRiqM=, tarball: '@types/zen-observable/download/@types/zen-observable-0.8.3.tgz'}
+    dev: false
+    optional: true
 
   /@typescript-eslint/eslint-plugin/4.29.1_d4376362794b743c19f4cba25c7fc6f5:
     resolution: {integrity: sha1-gI0gbiJ46AkpK13nUqkRBdqFhgs=, tarball: '@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-4.29.1.tgz'}
@@ -1583,11 +1650,35 @@ packages:
       '@xtuc/long': 4.2.2
     dev: true
 
+  /@wry/context/0.6.1:
+    resolution: {integrity: sha1-w8KcCtYirbAPalMwPE+WXuBuvrI=, tarball: '@wry/context/download/@wry/context-0.6.1.tgz'}
+    engines: {node: '>=8'}
+    dependencies:
+      tslib: 2.3.0
+    dev: false
+    optional: true
+
   /@wry/equality/0.1.11:
     resolution: {integrity: sha1-NcsVbkqWaVqoGp7MTQN4e8F/F5A=, tarball: '@wry/equality/download/@wry/equality-0.1.11.tgz'}
     dependencies:
       tslib: 1.14.1
     dev: false
+
+  /@wry/equality/0.5.2:
+    resolution: {integrity: sha1-csinp9iE3/MLYS9PhGTromwIDnM=, tarball: '@wry/equality/download/@wry/equality-0.5.2.tgz'}
+    engines: {node: '>=8'}
+    dependencies:
+      tslib: 2.3.0
+    dev: false
+    optional: true
+
+  /@wry/trie/0.3.1:
+    resolution: {integrity: sha1-Inm3kPFQMvi86n/JRNJ5iOWzsTk=, tarball: '@wry/trie/download/@wry/trie-0.3.1.tgz'}
+    engines: {node: '>=8'}
+    dependencies:
+      tslib: 2.3.0
+    dev: false
+    optional: true
 
   /@xtuc/ieee754/1.2.0:
     resolution: {integrity: sha1-7vAUoxRa5Hehy8AM0eVSM23Ot5A=, tarball: '@xtuc/ieee754/download/@xtuc/ieee754-1.2.0.tgz'}
@@ -2021,6 +2112,8 @@ packages:
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-instrument: 4.0.3
       test-exclude: 6.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /babel-plugin-jest-hoist/27.0.6:
@@ -3279,15 +3372,6 @@ packages:
       graphql: 15.5.1
     dev: false
 
-  /graphql-query-complexity/0.7.2_graphql@15.5.1:
-    resolution: {integrity: sha1-f8a7IJMKsbZm7PO7+yS2W28I7MQ=, tarball: graphql-query-complexity/download/graphql-query-complexity-0.7.2.tgz}
-    peerDependencies:
-      graphql: ^0.13.0 || ^14.0.0 || ^15.0.0
-    dependencies:
-      graphql: 15.5.1
-      lodash.get: 4.4.2
-    dev: false
-
   /graphql-subscriptions/1.2.1_graphql@15.5.1:
     resolution: {integrity: sha1-IUKy1ylmHd+We3OI988d1M8uBh0=, tarball: graphql-subscriptions/download/graphql-subscriptions-1.2.1.tgz}
     peerDependencies:
@@ -3319,6 +3403,21 @@ packages:
       graphql: 15.5.1
       iterall: 1.3.0
       uuid: 3.4.0
+    dev: false
+
+  /graphql-tools/8.1.0_graphql@15.5.1:
+    resolution: {integrity: sha1-R8Hg2kuTwJw+9fBswtuCoZ60Uwg=, tarball: graphql-tools/download/graphql-tools-8.1.0.tgz}
+    peerDependencies:
+      graphql: ^14.0.0 || ^15.0.0
+    dependencies:
+      '@graphql-tools/schema': 8.0.3_graphql@15.5.1
+      graphql: 15.5.1
+      tslib: 2.3.0
+    optionalDependencies:
+      '@apollo/client': 3.4.7_graphql@15.5.1
+    transitivePeerDependencies:
+      - react
+      - subscriptions-transport-ws
     dev: false
 
   /graphql/15.5.1:
@@ -3355,6 +3454,13 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+
+  /hoist-non-react-statics/3.3.2:
+    resolution: {integrity: sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=, tarball: hoist-non-react-statics/download/hoist-non-react-statics-3.3.2.tgz}
+    dependencies:
+      react-is: 16.13.1
+    dev: false
+    optional: true
 
   /html-encoding-sniffer/2.0.1:
     resolution: {integrity: sha1-QqbcT9M/ACgRduiyN1nKTk+hhfM=, tarball: html-encoding-sniffer/download/html-encoding-sniffer-2.0.1.tgz}
@@ -4220,7 +4326,6 @@ packages:
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha1-GSA/tZmR35jjoocFDUZHzerzJJk=, tarball: js-tokens/download/js-tokens-4.0.0.tgz}
-    dev: true
 
   /js-yaml/3.14.1:
     resolution: {integrity: sha1-2ugS/bOCX6MGYJqHFzg8UMNqBTc=, tarball: js-yaml/download/js-yaml-3.14.1.tgz}
@@ -4364,10 +4469,6 @@ packages:
     resolution: {integrity: sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=, tarball: lodash.clonedeep/download/lodash.clonedeep-4.5.0.tgz}
     dev: true
 
-  /lodash.get/4.4.2:
-    resolution: {integrity: sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=, tarball: lodash.get/download/lodash.get-4.4.2.tgz}
-    dev: false
-
   /lodash.merge/4.6.2:
     resolution: {integrity: sha1-VYqlO0O2YeGSWgr9+japoQhf5Xo=, tarball: lodash.merge/download/lodash.merge-4.6.2.tgz}
     dev: true
@@ -4403,6 +4504,14 @@ packages:
   /long/4.0.0:
     resolution: {integrity: sha1-mntxz7fTYaGU6lVSQckvdGjVvyg=, tarball: long/download/long-4.0.0.tgz}
     dev: false
+
+  /loose-envify/1.4.0:
+    resolution: {integrity: sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=, tarball: loose-envify/download/loose-envify-1.4.0.tgz}
+    hasBin: true
+    dependencies:
+      js-tokens: 4.0.0
+    dev: false
+    optional: true
 
   /lower-case/2.0.2:
     resolution: {integrity: sha1-b6I3xj29xKgsoP2ILkci3F5jTig=, tarball: lower-case/download/lower-case-2.0.2.tgz}
@@ -4676,6 +4785,14 @@ packages:
       mimic-fn: 2.1.0
     dev: true
 
+  /optimism/0.16.1:
+    resolution: {integrity: sha1-fI78HzF58YMHuIfhjBXFtxM/bn0=, tarball: optimism/download/optimism-0.16.1.tgz}
+    dependencies:
+      '@wry/context': 0.6.1
+      '@wry/trie': 0.3.1
+    dev: false
+    optional: true
+
   /optional/0.1.4:
     resolution: {integrity: sha1-zbGpvtxzfSAl9pDO61DgSURP1bM=, tarball: optional/download/optional-0.1.4.tgz}
     dev: true
@@ -4925,6 +5042,15 @@ packages:
       sisteransi: 1.0.5
     dev: true
 
+  /prop-types/15.7.2:
+    resolution: {integrity: sha1-UsQedbjIfnK52TYOAga5ncv/psU=, tarball: prop-types/download/prop-types-15.7.2.tgz}
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+    dev: false
+    optional: true
+
   /proxy-addr/2.0.7:
     resolution: {integrity: sha1-8Z/mnOqzEe65S0LnDowgcPm6ECU=, tarball: proxy-addr/download/proxy-addr-2.0.7.tgz}
     engines: {node: '>= 0.10'}
@@ -4984,6 +5110,11 @@ packages:
       iconv-lite: 0.4.24
       unpipe: 1.0.0
     dev: false
+
+  /react-is/16.13.1:
+    resolution: {integrity: sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=, tarball: react-is/download/react-is-16.13.1.tgz}
+    dev: false
+    optional: true
 
   /react-is/17.0.2:
     resolution: {integrity: sha1-5pHUqOnHiTZWVVOas3J2Kw77VPA=, tarball: react-is/download/react-is-17.0.2.tgz}
@@ -5166,6 +5297,7 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
+    dev: true
 
   /send/0.17.1:
     resolution: {integrity: sha1-wdiwWfeQD3Rm3Uk4vcROEd2zdsg=, tarball: send/download/send-0.17.1.tgz}
@@ -5482,7 +5614,6 @@ packages:
   /symbol-observable/4.0.0:
     resolution: {integrity: sha1-W0JfGSJ56H8vm5N6yFQNGYSzkgU=, tarball: symbol-observable/download/symbol-observable-4.0.0.tgz}
     engines: {node: '>=0.10'}
-    dev: true
 
   /symbol-tree/3.2.4:
     resolution: {integrity: sha1-QwY30ki6d+B4iDlR+5qg7tfGP6I=, tarball: symbol-tree/download/symbol-tree-3.2.4.tgz}
@@ -5617,6 +5748,14 @@ packages:
     dependencies:
       tslib: 1.14.1
     dev: false
+
+  /ts-invariant/0.9.1:
+    resolution: {integrity: sha1-h9/emJSkzjx3EbArG0Sef9c4SxM=, tarball: ts-invariant/download/ts-invariant-0.9.1.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      tslib: 2.3.0
+    dev: false
+    optional: true
 
   /ts-jest/27.0.4_52cc4273aa16028085013af47e479e10:
     resolution: {integrity: sha1-30loNTWDFWDMtY+UwCPYMbG4DfA=, tarball: ts-jest/download/ts-jest-27.0.4.tgz}
@@ -5769,25 +5908,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /type-graphql/1.1.1_graphql@15.5.1:
-    resolution: {integrity: sha1-3AcQ2WFxO5LT/uknmB+kO/cWZ6Q=, tarball: type-graphql/download/type-graphql-1.1.1.tgz}
-    engines: {node: '>= 10.3'}
-    requiresBuild: true
-    peerDependencies:
-      class-validator: '>=0.12.0'
-      graphql: ^15.3.0
-    dependencies:
-      '@types/glob': 7.1.4
-      '@types/node': 16.6.0
-      '@types/semver': 7.3.8
-      glob: 7.1.7
-      graphql: 15.5.1
-      graphql-query-complexity: 0.7.2_graphql@15.5.1
-      graphql-subscriptions: 1.2.1_graphql@15.5.1
-      semver: 7.3.5
-      tslib: 2.3.0
-    dev: false
-
   /type-is/1.6.18:
     resolution: {integrity: sha1-TlUs0F3wlGfcvE73Od6J8s83wTE=, tarball: type-is/download/type-is-1.6.18.tgz}
     engines: {node: '>= 0.6'}
@@ -5883,6 +6003,11 @@ packages:
       convert-source-map: 1.8.0
       source-map: 0.7.3
     dev: true
+
+  /value-or-promise/1.0.10:
+    resolution: {integrity: sha1-W/BB8emo5wQ5EYdVR2NnaKg25EY=, tarball: value-or-promise/download/value-or-promise-1.0.10.tgz}
+    engines: {node: '>=12'}
+    dev: false
 
   /value-or-promise/1.0.6:
     resolution: {integrity: sha1-IYqkeUqi7iTc9Iopq6RBPtWEdH8=, tarball: value-or-promise/download/value-or-promise-1.0.6.tgz}
@@ -6136,6 +6261,14 @@ packages:
       tslib: 1.14.1
       zen-observable: 0.8.15
     dev: false
+
+  /zen-observable-ts/1.1.0:
+    resolution: {integrity: sha1-LRqp15uHBY6bdWmLknkcGDhVH4M=, tarball: zen-observable-ts/download/zen-observable-ts-1.1.0.tgz}
+    dependencies:
+      '@types/zen-observable': 0.8.3
+      zen-observable: 0.8.15
+    dev: false
+    optional: true
 
   /zen-observable/0.8.15:
     resolution: {integrity: sha1-lkFcUS2OP/2SCv04iWBOMLnqrBU=, tarball: zen-observable/download/zen-observable-0.8.15.tgz}

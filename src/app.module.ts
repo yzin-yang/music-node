@@ -1,21 +1,24 @@
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
+import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+// import { FindModule } from './find/find.module';
+// import { RequestModule } from './request/request.module';
 import { SearchModule } from './search/search.module';
-import { FindModule } from './find/find.module';
-import { RequestModule } from './request/request.module';
 
 @Module({
   imports: [
     SearchModule,
+    // FindModule,
+    // RequestModule,
     GraphQLModule.forRoot({
-      autoSchemaFile: 'schema.gql'
+      include: [SearchModule],
+      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      sortSchema: true,
     }),
-    FindModule,
-    RequestModule
   ],
   controllers: [AppController],
-  providers: [AppService]
+  providers: [AppService],
 })
 export class AppModule {}
