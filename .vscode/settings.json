@@ -27,5 +27,8 @@
   "path-intellisense.extensionOnImport": true,
   "vetur.format.options.tabSize": 4,
   "comment-divider.length": 70,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
 }
